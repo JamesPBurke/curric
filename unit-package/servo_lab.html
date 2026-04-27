@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Servo Lab</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1>Servo Lab</h1>
+        <p class="tagline">Safe wiring and basic motion practice for the Micro:bit servo lab.</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <article>
+        <p><strong>Course:</strong> Engineering Design</p>
+        <p><strong>Lab Length:</strong> 1–2 class periods</p>
+        <p><strong>Purpose:</strong> Learn how to safely connect and test a servo before integrating it into the foam car project.</p>
+
+        <h2>Lab Question</h2>
+        <p><strong>How can we safely control motion with a Micro:bit and a servo motor?</strong></p>
+
+        <h2>Learning Targets</h2>
+        <ul>
+          <li>identify the difference between continuous-rotation and positional servos</li>
+          <li>safely wire a servo for testing</li>
+          <li>write simple code to control servo behavior</li>
+          <li>explain why motor power and control wiring must be handled carefully</li>
+        </ul>
+
+        <h2>Important Safety Note</h2>
+        <p>In classroom builds, do <strong>not</strong> assume the servo should be powered directly from the Micro:bit. A separate battery pack for the servo system is the safer default.</p>
+        <p>The Micro:bit can send the <strong>control signal</strong>, but the motor system may need its <strong>own power source</strong>.</p>
+        <p><strong>Critical rule:</strong> If you use separate power for the servo, the servo system and the Micro:bit still need a <strong>common ground</strong>.</p>
+
+        <h2>Servo Types</h2>
+        <h3>1. Positional servo</h3>
+        <ul>
+          <li>moves to a requested angle</li>
+          <li>often used for steering or controlled arm movement</li>
+          <li>example: blue servo in some classroom kits</li>
+        </ul>
+
+        <h3>2. Continuous-rotation servo</h3>
+        <ul>
+          <li>spins forward or backward instead of moving to a fixed angle</li>
+          <li>useful for wheels and drivetrain motion</li>
+          <li>often used as the main drive motor in simple robot/car builds</li>
+          <li>example: yellow servo in many classroom kits</li>
+        </ul>
+
+        <h2>Materials</h2>
+        <ul>
+          <li>1 Micro:bit</li>
+          <li>programming cable</li>
+          <li>battery pack for Micro:bit</li>
+          <li>1 servo motor</li>
+          <li>separate servo battery supply if required</li>
+          <li>wires / clip leads / breadboard / breakout board as needed</li>
+          <li>reference diagram from teacher</li>
+        </ul>
+
+        <h2>Wiring Concepts</h2>
+        <p>A servo usually has three wires: <strong>signal</strong>, <strong>power</strong>, and <strong>ground</strong>.</p>
+        <p>Common color pattern:</p>
+        <ul>
+          <li>orange/yellow = signal</li>
+          <li>red = power</li>
+          <li>brown/black = ground</li>
+        </ul>
+        <p><strong>Standard concept for this lab:</strong></p>
+        <ul>
+          <li>signal wire goes to a Micro:bit pin, often P0</li>
+          <li>ground must connect correctly</li>
+          <li>power must come from the approved source for your classroom setup</li>
+        </ul>
+        <p>Do not invent your own power arrangement unless instructed to do so.</p>
+
+        <h2>Procedure</h2>
+        <h3>Part 1: Identify the servo type</h3>
+        <ol>
+          <li>Look at the servo label or teacher reference.</li>
+          <li>Decide whether it is positional or continuous rotation.</li>
+          <li>Record how you know.</li>
+        </ol>
+
+        <h3>Part 2: Wire the system</h3>
+        <ol>
+          <li>Connect the servo signal line to the assigned Micro:bit pin.</li>
+          <li>Connect grounds correctly.</li>
+          <li>Connect the servo power using the approved setup.</li>
+          <li>Have the wiring checked before powering on.</li>
+        </ol>
+
+        <h3>Part 3: Write a simple test program</h3>
+        <p>Create a MakeCode program that sends a control signal to the servo.</p>
+        <p><strong>If it is a positional servo:</strong> test several angles such as center, left or low angle, right or high angle.</p>
+        <p><strong>If it is a continuous-rotation servo:</strong> test for stop / neutral, forward motion, reverse motion.</p>
+
+        <h2>Data Table</h2>
+        <table>
+          <thead>
+            <tr><th>Trial</th><th>Signal / value used</th><th>What the servo did</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td></td><td></td><td></td></tr>
+            <tr><td>2</td><td></td><td></td><td></td></tr>
+            <tr><td>3</td><td></td><td></td><td></td></tr>
+            <tr><td>4</td><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+
+        <h2>Troubleshooting Guide</h2>
+        <ul>
+          <li>Is the signal wire connected to the correct pin?</li>
+          <li>Is the code using the same pin as the wiring?</li>
+          <li>Is the servo getting approved power?</li>
+          <li>Is the ground shared correctly?</li>
+          <li>Is the servo type the one you think it is?</li>
+          <li>Is the neutral value for a continuous servo slightly off and in need of calibration?</li>
+        </ul>
+
+        <h2>Reflection Questions</h2>
+        <ol>
+          <li>Which type of servo did you use?</li>
+          <li>What was the most difficult part of the setup?</li>
+          <li>What values or commands produced useful behavior?</li>
+          <li>Why is a separate motor power source often safer than powering directly from the Micro:bit?</li>
+          <li>How will this lab help with the foam car build?</li>
+        </ol>
+
+        <h2>Exit Ticket</h2>
+        <p>In 3–5 sentences, explain how your servo was wired, what your test code did, and what you learned that will matter for the car project.</p>
+      </article>
+
+      <section>
+        <p><a class="link-list" href="index.html">← Back to package home</a></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Servo lab guidance for safe wiring and testing.</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Micro:bit Hardware Unit, Iteration 1</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1>Micro:bit Hardware Unit</h1>
+        <p class="tagline">Iteration 1 curriculum for a Micro:bit hardware unit.</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <article>
+        <h1>Micro:bit Hardware Unit, Iteration 1</h1>
+        <div class="article-meta">
+          <p><strong>Course:</strong> Engineering Design</p>
+          <p><strong>Teacher:</strong> James Patrick Burke</p>
+          <p><strong>Audience:</strong> High school engineering students with basic prior exposure to Micro:bit programming</p>
+          <p><strong>Unit Arc:</strong> From beginner physical computing with simple switches to a functional foam-bodied Micro:bit car</p>
+          <p><strong>Status:</strong> First iteration draft for refinement and expansion</p>
+        </div>
+
+        <h2>1. Unit vision</h2>
+        <p>This unit is a hands-on bridge from introductory Micro:bit coding to genuine systems engineering. Students move from writing code that responds to simple physical input, to integrating code, structure, wiring, motion, and fabrication in a final car project. The first project is deliberately constrained and fast: students design a switch from low-cost materials and use it to trigger outputs. The final project is slower and messier in the best way: students design, carve, wire, assemble, and program a foam-bodied vehicle whose movement is controlled by a Micro:bit and servo-based drivetrain.</p>
+        <blockquote>The instructional idea is simple: <strong>begin with reliable signal flow, then scale to controlled motion, then scale to integrated design.</strong></blockquote>
+
+        <h2>2. Big goals</h2>
+        <p>By the end of the unit, students should be able to:</p>
+        <ul>
+          <li>explain the function of Micro:bit GPIO pins, power, and ground</li>
+          <li>build and troubleshoot a simple input/output hardware circuit</li>
+          <li>read and write MakeCode programs that respond to external input</li>
+          <li>distinguish between power for logic/control and power for motors</li>
+          <li>safely wire and test a servo-controlled mechanism</li>
+          <li>design a physical chassis/body that houses electronic components</li>
+          <li>iterate on a prototype using evidence from testing</li>
+          <li>document engineering decisions and tradeoffs</li>
+        </ul>
+
+        <h2>3. Unit structure</h2>
+        <h3>Project 1: Switch + signal mini-project</h3>
+        <p>Students create a homemade switch using foil/cardboard or similar conductive-contact materials. The switch controls one or more outputs: the Micro:bit LED matrix, an external LED, or a simple signaling behavior.</p>
+        <p><strong>Purpose:</strong></p>
+        <ul>
+          <li>establish confidence with pins, circuits, and event-driven logic</li>
+          <li>normalize troubleshooting</li>
+          <li>create a shared baseline before motion and fabrication complexity arrive</li>
+        </ul>
+
+        <h3>Project 2: Foam car final</h3>
+        <p>Students design and build a car body from pink foam insulation and integrate a Micro:bit as the controller. A likely first iteration uses yellow continuous-rotation servos for drivetrain motion; blue positional servos may be added if steering is feasible.</p>
+        <p><strong>Purpose:</strong></p>
+        <ul>
+          <li>integrate mechanics, electronics, fabrication, and code</li>
+          <li>emphasize iteration, testing, and constraints</li>
+          <li>produce a tangible capstone with visible engineering tradeoffs</li>
+        </ul>
+
+        <h2>4. Recommended first-iteration design constraints</h2>
+        <p>Because this is the <strong>first full iteration</strong> of the unit, the project should be constrained to preserve sanity.</p>
+
+        <h3>Recommended minimum viable final car</h3>
+        <p>Students must produce a car that:</p>
+        <ul>
+          <li>has a carved foam body or foam chassis/body shell</li>
+          <li>securely mounts a Micro:bit</li>
+          <li>uses at least one motorized drive system under Micro:bit control</li>
+          <li>can move intentionally on the floor</li>
+          <li>includes a safe and sensible wiring layout</li>
+          <li>includes a brief design log and reflection</li>
+        </ul>
+
+        <h3>Strong recommendation for Iteration 1</h3>
+        <p>Use <strong>yellow continuous-rotation servos for propulsion</strong> and treat <strong>steering as optional extension work</strong>.</p>
+        <p>Why:</p>
+        <ul>
+          <li>it reduces mechanical complexity</li>
+          <li>it keeps the build within a realistic school timeline</li>
+          <li>it lowers the number of failure points</li>
+          <li>it lets students succeed on motion before introducing more advanced steering geometry</li>
+        </ul>
+
+        <h3>Optional extension</h3>
+        <ul>
+          <li>add a blue positional servo for steering</li>
+          <li>add a bumper switch</li>
+          <li>add simple autonomous or semi-autonomous behavior</li>
+          <li>complete a timed obstacle/course challenge</li>
+        </ul>
+
+        <h2>5. Scope and sequence</h2>
+        <h3>Week 1: Launch physical computing and review Micro:bit pins</h3>
+        <p><strong>Focus:</strong> What changes when code leaves the screen?</p>
+        <p><strong>Goals:</strong></p>
+        <ul>
+          <li>review Micro:bit basics already learned</li>
+          <li>identify P0, P1, P2, 3V, and GND</li>
+          <li>understand open/closed circuits and basic signal flow</li>
+          <li>begin switch design</li>
+        </ul>
+        <p><strong>Teacher moves:</strong></p>
+        <ul>
+          <li>demo Micro:bit pin usage and show common wiring errors</li>
+          <li>model a very simple input → output system</li>
+          <li>explicitly teach the difference between signal and power</li>
+          <li>establish norms for testing one change at a time</li>
+        </ul>
+        <p><strong>Student work:</strong></p>
+        <ul>
+          <li>annotate a Micro:bit pin diagram</li>
+          <li>sketch a switch mechanism</li>
+          <li>test conductive materials</li>
+          <li>build a first rough switch prototype</li>
+        </ul>
+        <p><strong>Deliverables:</strong></p>
+        <ul>
+          <li>labeled pin reference sheet</li>
+          <li>first switch sketch</li>
+          <li>prototype notes</li>
+        </ul>
+
+        <h3>Week 2: Build and code the switch project</h3>
+        <p><strong>Focus:</strong> Reliable input</p>
+        <p><strong>Goals:</strong></p>
+        <ul>
+          <li>connect a handmade switch to the Micro:bit</li>
+          <li>write code that detects the switch state</li>
+          <li>trigger a visible output</li>
+          <li>troubleshoot unreliable contact</li>
+        </ul>
+        <p><strong>Student work:</strong></p>
+        <ul>
+          <li>construct switch from cardboard, foil, tape, and leads</li>
+          <li>connect to GPIO and ground</li>
+          <li>create MakeCode program for pressed/not-pressed behavior</li>
+          <li>test repeatedly and revise design</li>
+        </ul>
+        <p><strong>Possible outputs:</strong></p>
+        <ul>
+          <li>external LED turns on when switch closes</li>
+          <li>matrix icon changes when switch closes</li>
+          <li>blinking signal pattern when activated</li>
+        </ul>
+        <p><strong>Deliverables:</strong></p>
+        <ul>
+          <li>functioning switch prototype</li>
+          <li>screenshot/export of MakeCode program</li>
+          <li>quick troubleshooting log</li>
+        </ul>
+
+        <h3>Week 3: Refine switch and introduce engineering quality criteria</h3>
+        <p><strong>Focus:</strong> Stability, usability, and evidence</p>
+        <p><strong>Goals:</strong></p>
+        <ul>
+          <li>improve switch durability and reliability</li>
+          <li>compare designs using criteria</li>
+          <li>prepare students for design constraints in the car project</li>
+        </ul>
+        <p><strong>Quality criteria for the switch:</strong></p>
+        <ul>
+          <li>activates consistently</li>
+          <li>does not short accidentally</li>
+          <li>survives repeated use</li>
+          <li>is understandable to another user</li>
+          <li>has reasonably neat wiring</li>
+        </ul>
+        <p><strong>Student work:</strong></p>
+        <ul>
+          <li>run repeated trials</li>
+          <li>revise design based on failures</li>
+          <li>present switch and explain how it works</li>
+        </ul>
+        <p><strong>Deliverables:</strong></p>
+        <ul>
+          <li>revised switch</li>
+          <li>peer feedback form</li>
+          <li>short reflection: what made the design more reliable?</li>
+        </ul>
+
+        <h3>Week 4: Introduce the foam car project and plan the build</h3>
+        <p><strong>Focus:</strong> Systems design before carving</p>
+        <p><strong>Goals:</strong></p>
+        <ul>
+          <li>define the final car challenge</li>
+          <li>identify required subsystems</li>
+          <li>draft body/chassis plans before cutting foam</li>
+        </ul>
+        <p><strong>Subsystems to teach explicitly:</strong></p>
+        <ul>
+          <li>controller (Micro:bit)</li>
+          <li>drivetrain (servo(s), wheels, axle method)</li>
+          <li>structure (foam body/chassis)</li>
+          <li>power (battery pack, servo power, shared ground)</li>
+          <li>code (movement logic)</li>
+        </ul>
+        <p><strong>Student work:</strong></p>
+        <ul>
+          <li>analyze sample builds and constraints</li>
+          <li>sketch top/side views of car</li>
+          <li>decide where components will mount</li>
+          <li>estimate dimensions and carve plan</li>
+        </ul>
+        <p><strong>Deliverables:</strong></p>
+        <ul>
+          <li>car design sheet</li>
+          <li>component layout sketch</li>
+          <li>bill of materials per team</li>
+        </ul>
+
+        <h3>Week 5: Servo control and safe power</h3>
+        <p><strong>Focus:</strong> Make things move without frying the board</p>
+      </article>
+
+      <section>
+        <p><a class="link-list" href="index.html">← Back to site home</a></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Rendered HTML version of the Micro:bit hardware curriculum.</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Switch Project Guide</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1>Switch Project Guide</h1>
+        <p class="tagline">Student-facing guide for building a Micro:bit switch mini-project.</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <article>
+        <p><strong>Course:</strong> Engineering Design</p>
+        <p><strong>Project Length:</strong> About 2–3 weeks</p>
+        <p><strong>Project Goal:</strong> Build a working physical switch that connects to a Micro:bit and triggers a programmed output.</p>
+
+        <h2>Project Summary</h2>
+        <p>In this project, you will create a physical switch from simple materials such as cardboard and aluminum foil. Your switch will connect to the Micro:bit through its pins. When the switch closes the circuit, your code should detect the change and produce an output.</p>
+        <p>This project introduces physical computing: code that responds to something happening in the real world.</p>
+
+        <h2>Learning Targets</h2>
+        <ul>
+          <li>identify the Micro:bit pins used in a simple circuit</li>
+          <li>explain how a switch opens and closes a circuit</li>
+          <li>connect a physical input to a programmed output</li>
+          <li>test and improve a prototype for reliability</li>
+        </ul>
+
+        <h2>Success Criteria</h2>
+        <ul>
+          <li>the switch reliably changes the state of the circuit</li>
+          <li>the Micro:bit responds correctly when the switch is used</li>
+          <li>the wiring is safe and organized</li>
+          <li>you can explain how the switch works</li>
+          <li>you improve the design based on testing</li>
+        </ul>
+
+        <h2>Suggested Materials</h2>
+        <ul>
+          <li>1 Micro:bit</li>
+          <li>battery pack or USB connection</li>
+          <li>alligator clips / jumper leads</li>
+          <li>cardboard</li>
+          <li>aluminum foil</li>
+          <li>tape or glue</li>
+          <li>scissors</li>
+          <li>optional: binder clips, paper fasteners, clothespins, or extra cardboard supports</li>
+          <li>optional: LED and resistor for external output</li>
+        </ul>
+
+        <h2>Background Knowledge</h2>
+        <h3>Important pins</h3>
+        <ul>
+          <li><strong>P0 / P1 / P2</strong>: can be used for input or output</li>
+          <li><strong>GND</strong>: ground, used to complete the circuit</li>
+          <li><strong>3V</strong>: power pin</li>
+        </ul>
+        <h3>Key idea</h3>
+        <p>A switch changes whether a circuit is open or closed.</p>
+        <ul>
+          <li><strong>Open circuit</strong> = no complete path</li>
+          <li><strong>Closed circuit</strong> = complete path, so the signal can be detected</li>
+        </ul>
+
+        <h2>Build Challenge</h2>
+        <p>Design a switch that:</p>
+        <ul>
+          <li>can be pressed, squeezed, folded, or otherwise activated by a user</li>
+          <li>changes the signal going into the Micro:bit</li>
+          <li>is stable enough to work more than once</li>
+          <li>does not accidentally stay shorted all the time</li>
+        </ul>
+
+        <h2>Step-by-Step Process</h2>
+        <h3>Part 1: Plan</h3>
+        <ol>
+          <li>Sketch your switch idea.</li>
+          <li>Label the two parts that will make contact.</li>
+          <li>Decide how the switch will return to its open state.</li>
+          <li>Predict what could go wrong.</li>
+        </ol>
+
+        <h3>Part 2: Build</h3>
+        <ol>
+          <li>Cut cardboard pieces for the base and moving part.</li>
+          <li>Attach foil where the conductive surfaces should touch.</li>
+          <li>Tape or glue the structure together.</li>
+          <li>Leave room for clips or wires to connect.</li>
+          <li>Connect one side to a signal pin and one side to ground.</li>
+        </ol>
+
+        <h3>Part 3: Code</h3>
+        <p>Create a MakeCode program that does something when the switch is activated.</p>
+        <p>Possible responses:</p>
+        <ul>
+          <li>show an icon</li>
+          <li>clear the screen when not pressed</li>
+          <li>turn on an LED</li>
+          <li>flash a pattern</li>
+        </ul>
+
+        <h3>Part 4: Test</h3>
+        <p>Run multiple trials.</p>
+        <p>Ask:</p>
+        <ul>
+          <li>Does it trigger every time?</li>
+          <li>Does it trigger when it should not?</li>
+          <li>Does the mechanism stay lined up?</li>
+          <li>Do the wires stay connected?</li>
+        </ul>
+
+        <h3>Part 5: Improve</h3>
+        <p>Revise your design to make it more reliable, easier to use, stronger, and clearer to understand.</p>
+
+        <h2>Example Test Log</h2>
+        <table>
+          <thead>
+            <tr><th>Trial</th><th>What happened?</th><th>Problem type</th><th>Next change</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Nothing happened</td><td>Wiring</td><td>Check clip connection to pin</td></tr>
+            <tr><td>2</td><td>Triggered sometimes</td><td>Contact surface</td><td>Add more foil / better alignment</td></tr>
+            <tr><td>3</td><td>Worked well</td><td>None</td><td>Keep design and strengthen hinge</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Troubleshooting Questions</h2>
+        <ul>
+          <li>Is the code correct?</li>
+          <li>Are the wires connected to the intended pins?</li>
+          <li>Is one side connected to ground?</li>
+          <li>Are the foil surfaces actually touching?</li>
+          <li>Are they touching too much and creating a permanent short?</li>
+          <li>Is the structure too loose or unstable?</li>
+        </ul>
+
+        <h2>Reflection Questions</h2>
+        <ol>
+          <li>What design did you build, and how does it work?</li>
+          <li>What problem did you encounter most often?</li>
+          <li>What change improved reliability the most?</li>
+          <li>If you rebuilt it, what would you change?</li>
+        </ol>
+      </article>
+
+      <section>
+        <p><a class="link-list" href="index.html">← Back to package home</a></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Student-facing switch project guide.</p>
+      </div>
+    </footer>
+  </body>
+</html>
